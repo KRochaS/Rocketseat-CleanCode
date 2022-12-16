@@ -65,3 +65,22 @@ Adicione ferramentas e tecnologias conforme houver realmente necessidade.
 5 - Iterações Curtas: Pequenas iterações no código.
 Tem a ver com uma feature não demorando semanas para ir ao ar
 para receber a primeira revisão. O ideal é ir enviando para revisão/produção aos poucos.
+
+### Clean Code - ReactJS
+
+- Desacoplando componentes:
+    1. Quando tem algo repetitivo
+    2.  Quando é possível isolar algo do seu contexto
+    (sem prejudicar o comportamento)
+
+- Componentes Puros 
+    1. Quando há chamadas API, interação com 'mundo externo', o componente 
+    deixa de ser um componente Puro.
+    2. Quando houver a necessidade de separar um componente, não levar 
+    muita lógica para dentro dele, que torna o componente inutilizável em outros contextos da aplicação. 
+
+- Funções e eventos no React: 
+     1. Prefixo Handle: Funções disparada através de um evento do usuário
+     um click, submit. 
+     2. Prefixo On: Funções que são para executar cálculo, operações, chamada API.
+     3. Quando o componente está recebendo uma função, que será disparada através de um evento do usuário o Prefixo On, é mais adequado. Assim como os eventos do HTML (onClick, onMouseOver)
