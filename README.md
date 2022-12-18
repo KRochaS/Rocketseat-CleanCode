@@ -84,3 +84,29 @@ para receber a primeira revisão. O ideal é ir enviando para revisão/produçã
      um click, submit. 
      2. Prefixo On: Funções que são para executar cálculo, operações, chamada API.
      3. Quando o componente está recebendo uma função, que será disparada através de um evento do usuário o Prefixo On, é mais adequado. Assim como os eventos do HTML (onClick, onMouseOver)
+
+### Clean Code - Princípios de SOLID
+
+- SRP: Single Responsiblity Principle
+    1. Cada parte da aplicação deve ser responsável por uma única ação
+    2. Como identificar o não uso: Ao analisar um método, classe, entidade, e identificar que há mais de uma ação.
+    Exemplo: Método que cria um usuário E envia um e-mail para esse usuário. Nesse caso, o método não está seguindo o princípio.
+
+
+- OCP: Open-Closed Principle
+    1. As classes, entidades, métodos da aplicação devem estar abertas para extensão e nunca para modificação. Deve ser possível adicionar comportamento na classe, porém, nunca modificar um comportamento que já existe. 
+    2. Como identificar o não uso: Quando há partes no código em que há condicionais e facilmente terá que adicionar mais if's no futuro.
+    Exemplo: Cálculo de frete, se a transportadora for correios, então faz um cálculo. Ao entrar uma nova transportadora, adicionar mais uma condicional. Há uma modificação na classe original a cada nova regra necessária.
+    3. Deveria se extender a classe original com uma nova opção.
+
+- LSP: Liskov Substitution Principle
+    1. Princípio totalmente atrelado com outros princípios como: OCP e DIP.
+    2. Deve ser possível substituir uma dependência de uma classe por outra, desde que tenham o mesmo formato.
+
+- ISP: Interface Segregation Principle
+    1. Instrui o código mais fácil de receber mais manutenção
+    2. Separar as interfaces (Regras que uma classe precisa seguir) 
+
+- DIP: Dependency Inversion Principle
+    1. Princípio totalmente conectado com o LSP
+    2. As dependências (algo que vem de fora da classe) de uma classe devem ser injetadas, inversa ao modelo tradicional.
