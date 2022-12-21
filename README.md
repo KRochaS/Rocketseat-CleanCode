@@ -110,3 +110,10 @@ para receber a primeira revisão. O ideal é ir enviando para revisão/produçã
 - DIP: Dependency Inversion Principle
     1. Princípio totalmente conectado com o LSP
     2. As dependências (algo que vem de fora da classe) de uma classe devem ser injetadas, inversa ao modelo tradicional.
+
+### Clean Code - DDD
+
+- Domain Driven Design: Domínio é o problema que está sendo resolvido
+- Subdomínios: Diferentes áreas de entendimento dentro do domínio principal
+Exemplo: E-commerce, onde subdomínio são logística, faturamento, pagamento,
+estoque.
